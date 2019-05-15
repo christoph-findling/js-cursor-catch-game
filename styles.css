@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 5px solid #780116;
+}
+
+#timer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    width: 60px;
+    height: 60px;
+    border: 4px solid #780116;
+    color: #780116;
+    background-color: rgb(233, 233, 181);
+    border-radius: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    z-index: 10;
+    cursor: none;
+    box-shadow: 1px 1px 5px #780116;
+}
+
+#counter {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    min-width: 100px;
+    height: 50px;
+    border: 4px solid #780116;
+    background-color: rgb(233, 233, 181);
+    color: #780116;
+    font-size: 30px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    font-family: 'Courier New', Courier, monospace;
+    z-index: 10;
+    cursor: none;
+    box-shadow: 1px 1px 5px #780116;
+}
+
+#scoreDiv {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px 30px;
+    border: 2px solid #F7B538;
+    box-shadow: 2px 2px 2px #F7B538;
+    background-color: #780116;
+    border-radius: 10%;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    text-align: center;
+    z-index: 10;
+    user-select: none;
+    visibility: hidden;
+    box-shadow: 2px 2px 2px #780116;
+}
+
+#scoreDiv p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #F7B538;
+}
+
+#score {
+    width: 100%;
+    font-size: 40px;
+    padding-top: 10px;
+}
+
+#startButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    color: #780116;
+    height: 100px;
+    border: 2px solid #780116;
+    box-shadow: 2px 2px 2px #780116;
+    background-color: rgb(233, 233, 181);
+    border-radius: 10%;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    cursor: pointer;
+    z-index: 10;
+    animation: bounce 1s ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+#startButton:hover {
+    background-color: rgb(228, 228, 118);
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate(-50%, -40%)
+    }
+    50% {
+        transform: translate(-50%, -50%)
+    }
+    100% {
+        transform: translate(-50%, -40%)
+    }
+}
+
+#cursor {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border: 4px solid #F7B538;
+    border-radius: 100%;
+    z-index: -1;
+    visibility: hidden;
+    background-color: #780116;
+}
+
+#square {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    visibility: hidden;
+}
